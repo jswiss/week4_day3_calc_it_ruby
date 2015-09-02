@@ -1,1 +1,10 @@
 <h1><%= @title %></h1>
+
+<form action="/mort_calc" method="post">
+  <input type="text" name="loan" autofocus placeholder="in £">
+  <input type="text" name='apr' placeholder="APR %">
+  <input type="text" name="term" placeholder="Term (months)">
+<button type="submit" name="mort_calc">Calculate</button>
+</form>
+
+<p>Your monthly payment is <% @payment %> <p>

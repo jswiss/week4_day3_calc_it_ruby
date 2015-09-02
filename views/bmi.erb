@@ -1,10 +1,10 @@
 <h1><%= @title %></h1>
 
-<form action="/bmi" method="post">
+<form action="/bmi_calc" method="post">
   <input type="text" name="unit" placeholder="imperial/metric" autofocus>
   <input type="text" name='height' placeholder="height">
   <input type="text" name="weight"placeholder="weight">
-<button type='submit' name="bmi">Calculate</button>
+<button type='submit' name="bmi_calc">Calculate</button>
 </form>
 
-<%= @bmi %>
+<p><%= @bmi %></p>

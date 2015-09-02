@@ -30,3 +30,8 @@ select {
 button [name=calculate] {
   margin: 10px 0 5px 120px;
 }
+
+p {
+  font-size: 25px;
+  margin: 10px 0 0 120px;
+}

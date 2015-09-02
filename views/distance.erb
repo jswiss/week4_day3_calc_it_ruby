@@ -1,1 +1,11 @@
 <h1><%= @title %></h1>
+
+<form action="/dist_calc" method="post">
+  <input type="distance" name="distance" autofocus placeholder="Distance">
+  <input type="mpg" name='mpg' placeholder="Miles per Gallon">
+  <input type="cost" name="cost" placeholder="Cost ($/gallon)">
+  <input type="speed" name="mph" placeholder="Miles per hour">
+<button type="submit" name="dist_calc">Calculate</button>
+</form>
+
+<p>Your trip will take <%= @time %> hours and cost $<%= @cost %> <p>
