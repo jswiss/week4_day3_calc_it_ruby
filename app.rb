@@ -8,15 +8,16 @@ get '/' do
 end
 
 post '/calculate' do
-  case params[:ops]
-  when 'Add' then @basic = params[:input1].to_i + params[:input2].to_f
-  when 'Subtract' then @basic = params[:input1].to_i - params[:input2].to_f
-  when 'Multiply' then @basic = params[:input1].to_i * params[:input2].to_f
-  when 'Divide' then @basic = params[:input1].to_i / params[:input2].to_f
+  case params[:symbol]
+  when '+' then @basic = params[:input1].to_f + params[:input2].to_f
+  when '-' then @basic = params[:input1].to_f - params[:input2].to_f
+  when '*' then @basic = params[:input1].to_f * params[:input2].to_f
+  when '/' then @basic = params[:input1].to_f / params[:input2].to_f
   else
-    @basic = 'Error. Please only enter numbers'
     erb :basic
   end
+    erb :basic
+
 end
 
 get '/basic' do

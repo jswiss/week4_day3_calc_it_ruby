@@ -1,14 +1,9 @@
 <h1><%= @title %></h1>
 
 <form action="/calculate" method="post">
-  <input type="number" name="input1" autofocus>
-  <select name="Basic Operations" name="ops">
-    <option value="Add">+</option>
-    <option value="Subtract">-</option>
-    <option value="Multiply">*</option>
-    <option value="Divide">/</option>
-  </select>
-  <input type="number" name="input2">
+  <input type="text" name="input1" autofocus>
+  <input type="text" name='symbol' placeholder="+, -, *, /">
+  <input type="text" name="input2">
 <button type='submit' name="calculate">Calculate</button>
 </form>
 
