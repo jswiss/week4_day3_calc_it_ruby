@@ -27,8 +27,8 @@ get '/distance' do
   erb :distance
 end
 
-get '/exchange' do
+get '/exchange_rate' do
   @title = 'Exchange Rate Calculator'
-  erb :exchange
+  erb :exchange_rate
 end
 
