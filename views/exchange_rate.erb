@@ -1,1 +1,8 @@
 <h1><%= @title %></h1>
+
+<form action="/exchange_rate" method="post">
+  <input type="text" name="age" autofocus placeholder="How old are you?">
+<button type='submit' name="old">Calculate</button>
+</form>
+
+<p><%= @old %><p>

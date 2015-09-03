@@ -36,6 +36,14 @@ post '/dist_calc' do
   erb :distance 
 end
 
+post '/mort_calc' do
+  @apr = (params[:apr].to_f/100)/12
+  @temp = (1 + @apr) ** params[:term].to_f
+  @payment = ((params[:loan].to_f * @apr * @temp)/(@temp - 1)).round()
+  erb :mortgage
+end
+
+
 get '/basic' do
   @title = 'Basic Calculator'
   erb :basic
